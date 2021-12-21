@@ -13,14 +13,14 @@
     <ul class="row">
         {foreach from=$categories item=category name=homeCategory}
             {assign var='categoryLink' value= $link->getcategoryLink($category->id_category, $category->link_rewrite)}
-            {assign var='imageLink' value= $link->getCatImageLink($category->link_rewrite, $category->id_category, $pic_size_type)}
+            {assign var='imageLink' value= $link->getCatImageLink($category->link_rewrite, $category->id_category, 'category_default')}
             
             <li class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <a href="{$categoryLink}" title="{$category->name|escape:html:'UTF-8'}">
                     {if $category->id_image|intval > 0}
                         <img src="{$imageLink}" alt="{$category->name|escape:html:'UTF-8'}" />
                     {else}
-                        <img src="{$urls.img_cat_url|escape:'html':'UTF-8'}{$language.iso_code|escape:'html':'UTF-8'}.jpg" alt="" />
+                        <img src="{$urls.img_cat_url|escape:'html':'UTF-8'}{$language.iso_code|escape:'html':'UTF-8'}.jpg" alt="{$category->name|escape:html:'UTF-8'}" />
                     {/if}
                 </a>
                 <h5 class="category-title">
