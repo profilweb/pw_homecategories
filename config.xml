@@ -2,7 +2,7 @@
 <module>
 	<name>pw_homecategories</name>
 	<displayName><![CDATA[PW Home Categories]]></displayName>
-	<version><![CDATA[1.0.0]]></version>
+	<version><![CDATA[1.1.0]]></version>
 	<description><![CDATA[Affiche un bloc catégorie sur la page d'accueil]]></description>
 	<author><![CDATA[Profil Web]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

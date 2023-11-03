@@ -9,7 +9,7 @@
 
 <!-- MODULE pw_homecategories -->
 <div id="pw-homecategories">
-    <h4>{l s='Popular categories' mod='pw_homecategories'}</h4>
+    <h4>{l s='Popular categories' mod='Pwhomecategories'}</h4>
     <ul class="row">
         {foreach from=$categories item=category name=homeCategory}
             {assign var='categoryLink' value= $link->getcategoryLink($category->id_category, $category->link_rewrite)}
@@ -35,7 +35,7 @@
                 </p>
             </li>
         {foreachelse}
-            {l s='No categories' mod='pw_homecategories'}
+            {l s='No categories' mod='Pwhomecategories'}
         {/foreach}
     </ul>
 </div>

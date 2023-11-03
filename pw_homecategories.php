@@ -25,7 +25,7 @@ Class Pw_homecategories extends Module
     {
         $this->name = 'pw_homecategories';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.0';
+        $this->version = '1.1.0';
         $this->author = 'Profil Web';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
@@ -56,8 +56,7 @@ Class Pw_homecategories extends Module
     public function hookDisplayHome()
     {
 
-        global $link;
-
+        $link = Context::getContext()->link;
         $idLanguage = (int) Context::getContext()->language->id;
 
         $categories = Category::getChildren(2, $idLanguage, true);
